@@ -1,0 +1,71 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>jQuery</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style type="text/css">
+
+
+	#circle {
+	height:200px;
+	width:200px;
+	background:green;
+	border-radius:100px;
+	}
+
+
+
+	</style>
+
+	  <script type="text/javascript" src="jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+	<div id="circle"></div>
+
+	<script>
+
+var large = true;
+
+	$("#circle").click(function() {
+
+	 if (large == true) {
+     $(this).animate({
+  			width:"300px",
+  			height:"300px",
+  			borderRadius:"150px",
+  			marginLeft:"100px",
+  			marginTop:"100px"
+        }, 1000);
+
+    large = false;
+
+  } else {
+    $(this).animate({
+        height:"200px",
+        width:"200px",
+        borderRadius:"100px",
+        marginLeft:"0px",
+        marginTop:"8px"
+        }, 1000);
+
+    large = true;
+
+    }
+	});
+
+
+	</script>
+
+
+</body>
+</html>
